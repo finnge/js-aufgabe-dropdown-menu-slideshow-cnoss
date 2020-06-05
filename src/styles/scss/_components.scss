@@ -12,9 +12,8 @@
 ############################################################################ */
 .page-footer {
   padding: $m $m $xxl $m;
-
-  color: $footer-color;
   background-color: $footer-background-color;
+  color: $footer-color;
 
   $self: &;
 
@@ -23,11 +22,9 @@
     line-height: $lh-default;
 
     & a {
-      font-weight: $fw-normal;
-
-      text-decoration: none;
-
       color: $footer-color;
+      text-decoration: none;
+      font-weight: $fw-normal;
     }
 
     & + .linklist {
@@ -36,15 +33,14 @@
   }
 
   &__headline {
-    font-size: $s;
-    font-weight: $fw-bold;
-
     color: $footer-color;
+    font-weight: $fw-bold;
+    font-size: $s;
   }
 
   @media only screen and (min-width: $vp-large) {
-    width: $vp-large;
     margin: 0 auto;
+    width: $vp-large;
     box-shadow: $shadow-l;
   }
 }
@@ -54,19 +50,16 @@
 ############################################################################ */
 .linklist {
   &__item {
+    margin-left: $m;
     font-family: 'Material Icons';
     line-height: $lh-default;
 
-    margin-left: $m;
-
     &:before {
-      font-size: $xs;
-
       display: inline-block;
       margin-left: -$m;
       padding-right: $xxs;
-
       content: 'link';
+      font-size: $xs;
     }
 
     & > a {
@@ -93,13 +86,13 @@
 .teaser {
   &__image {
     display: block;
-    width: 100%;
     margin-bottom: $xs;
+    width: 100%;
   }
 
   &__headline {
-    font-size: $s;
     margin-bottom: $xs;
+    font-size: $s;
   }
 
   &__text {
@@ -108,17 +101,14 @@
   }
 
   &__cta {
-    font-size: $s;
-    font-weight: $fw-normal;
-
     display: inline-block;
-
-    transition: background $tr-medium;
-    text-decoration: none;
-
-    color: #fff;
     border: solid $border-width $border-color;
     background-color: $interaction-color;
+    color: #fff;
+    text-decoration: none;
+    font-weight: $fw-normal;
+    font-size: $s;
+    transition: background $tr-medium;
 
     @include button;
     &:hover {
@@ -143,28 +133,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 50vh;
   padding: $l;
-  transition: min-height $tr-medium;
-
+  min-height: 50vh;
   background-image: url(../images/hero-l.png);
   background-position: center center;
   background-size: cover;
+  transition: min-height $tr-medium;
 
   &__menu-bar {
-    background-color: $darken-medium;
-    left: 0;
-    padding: $xs $l;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
     z-index: 10;
+    padding: $xs $l;
+    width: 100%;
+    background-color: $darken-medium;
   }
 
   &__menu-bar-nav {
+    overflow: hidden;
     height: 0;
     opacity: 0;
-    overflow: hidden;
     transition: opacity $tr-medium;
   }
 
@@ -178,9 +167,9 @@
     flex-direction: column;
 
     @media only screen and (min-width: $vp-large) {
-      width: $vp-large;
       margin: 0 auto;
       padding: $m;
+      width: $vp-large;
     }
   }
 
@@ -190,7 +179,6 @@
     align-self: flex-start;
     margin: 0;
     padding: $xxs $xs;
-
     box-shadow: $shadow-l;
   }
 
@@ -199,8 +187,8 @@
   }
 
   &__subtitle {
-    color: $lightest;
-    background-color: $decoration-color;;
+    background-color: $decoration-color;
+    color: $lightest;;
   }
 
   @media only screen and (min-width: $vp-large) {
@@ -218,16 +206,15 @@
 }
 
 .hamburger-button {
+  width: 30px;
+  border:0;
+  background:0 0;
+  cursor:pointer;
+  transition:transform .2s ease-in-out;
 
   &:active {
     border: none;
   }
-
-  cursor:pointer;
-  background:0 0;
-  border:0;
-  transition:transform .2s ease-in-out;
-  width: 30px;
 
   &__bar-top,
   &__bar-bottom {
@@ -252,16 +239,16 @@
 ############################################################################ */
 
 .menu-list {
-  color: $light;
-  font-size: $m;
   overflow: hidden;
   padding-top: $xxs;
   padding-bottom: $xxs;
+  color: $light;
+  font-size: $m;
 
   &__link {
     color: $menu-link-color;
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &__link:hover {
@@ -275,16 +262,14 @@
 
 .main-content,
 .aside-content {
-
-  background-color: $lightest;
   padding: $l $l $xl $l;
+  background-color: $lightest;
 
   &__section {
     margin-bottom: $xxl;
 
     & + & {
       padding-top: $xl;
-
       border-top: solid $border-width $decoration-color;
     }
   }
@@ -308,10 +293,11 @@
 
 @media only screen and (min-width: $vp-large) {
   .content-wrap {
-    width: $vp-large;
     margin: 0 auto;
-    grid-template-columns: 60 * $m 20 * $m;
+    width: $vp-large;
     box-shadow: $shadow-l;
+
+    grid-template-columns: 60 * $m 20 * $m;
   }
 }
 
@@ -321,9 +307,8 @@
 .table {
   &__cell,
   &__head {
-    width: 40%;
     padding: $xxs;
-
+    width: 40%;
     text-align: left;
   }
 
@@ -333,7 +318,6 @@
 
   &__cell {
     padding: $xxs;
-
     border-top: solid $border-width $border-color;
   }
 
@@ -357,7 +341,6 @@
   &__cell--is-number,
   &__head--is-number {
     width: 10%;
-
     text-align: right;
   }
 }
@@ -367,7 +350,6 @@
 
 .ranking {
   margin-left: $m;
-
   list-style-type: decimal;
 }
 
@@ -383,9 +365,8 @@
   &__number {
     color: $decoration-color;
     &:before {
-      content: '#';
-
       color: $dark;
+      content: '#';
     }
   }
 }
@@ -397,12 +378,12 @@
 	position: relative;
 
 	&__slide {
-		left: 0;
-		opacity: 0;
 		position: absolute;
 		top: 0;
-    transition: opacity 1s;
+		left: 0;
 		z-index: 1;
+		opacity: 0;
+    transition: opacity 1s;
   }
 
   &__slide:first-child {
@@ -410,30 +391,30 @@
   }
 
   &__slide--visible {
-    opacity: 1;
     z-index: 2;
+    opacity: 1;
   }
 
   &__nav-next,
   &__nav-previous {
-    background-color: $darken-light;
-    cursor: pointer;
-    display: inline-block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    transition: background-color $tr-medium;
     z-index: 3;
+    display: inline-block;
+    background-color: $darken-light;
+    cursor: pointer;
+    transition: background-color $tr-medium;
+    transform: translateY(-50%);
     
     &:hover {
       background-color: $darken-strong;
     }
 
     &::before {
-      color: $white;
       display: inline-block;
-      font-family: $font-icons;
+      color: $white;
       font-size: $l;
+      font-family: $font-icons;
       line-height: $lh-default;
       @media only screen and (min-width: $vp-small) { 
         font-size: $xxl;
@@ -456,5 +437,28 @@
     &:before {
       content: 'navigate_before';
     }
+  }
+}
+
+.dot-navigation {
+  margin: 0 0 0 0;
+  padding: 0 0 $s 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+
+  &__dot {
+    display: inline-block;
+    margin: 0 $xxs;
+    width: $xxs;
+    height: $xxs;
+    border: $border-width $darker solid;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__dot--active {
+    background-color: $darker;
   }
 }
